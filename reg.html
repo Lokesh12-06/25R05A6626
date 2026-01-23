@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -36,7 +36,8 @@
             var dob1=document.rf.dob.value;
             var pass1=document.rf.pass.value;
             var cpass1=document.rf.cpass.value;
-            var pincode=document.rf.pin.value;
+            var pincode1=document.rf.pin.value;
+            var add1=document.rf.add.value;
             if(un1.length<3)
             {
                 alert("3 l");
@@ -58,6 +59,11 @@
             else if(pin1.length!=6)
             {
                 alert("6 n");
+                return false;
+            }
+            else if(add1.length!=20)
+            {
+                alert("10 n");
                 return false;
             }
             else{
@@ -105,7 +111,7 @@
                     </tr>
                 <tr>
                     <td><label>state</label></td>
-                      <td><select><option>Andhra Pradesh</option>
+                      <td><select required><option>Andhra Pradesh</option>
                                   <option>Arunachal Pradesh</option>
 <option>Assam</option>
 <option>Bihar</option>
@@ -132,8 +138,19 @@
 <option>Tripura</option>
 <option>Uttar Pradesh</option>
 <option>Uttarakhand</option>
-<option>West Bengal</option></select>
-required></td></tr>
+<option>West Bengal</option></select> </td></tr>
+                <tr>
+<tr>
+    <td><label>known language</label></td>
+    <td>
+        <input type="checkbox" name="lan" value="English"> English
+        <input type="checkbox" name="lan" value="Hindi"> Hindi
+        <input type="checkbox" name="lan" value="Telugu"> Telugu
+    </td>
+</tr>
+                    <td><label>address</label></td>
+                      <td><input type="text" name="add" required></td>
+                    </tr>
                 <tr>
                     <td><label>pincode</label></td>
                       <td><input type="number" name="pin" required></td>
